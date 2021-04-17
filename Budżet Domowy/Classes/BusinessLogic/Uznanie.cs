@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Budżet_Domowy.Classes.BusinessLogic
 {
-    class Przychod : Operacja
+    class Uznanie : Operacja
     {
-        public Przychod(int m_iId, string m_sRodzajOperacji, double m_dWartoscOperacji, DateTime m_dtDataWykonaniaOperacji, int m_iIdOsoby)
+        public Uznanie(int m_iId, string m_sRodzajOperacji, double m_dWartoscOperacji, DateTime m_dtDataWykonaniaOperacji, int m_iIdOsoby)
         {
             ID = m_iId;
             RodzajOperacji = m_sRodzajOperacji;
