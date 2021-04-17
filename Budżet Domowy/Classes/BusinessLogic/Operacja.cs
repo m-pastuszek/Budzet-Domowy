@@ -7,7 +7,7 @@ namespace Budżet_Domowy.Classes
     class Operacja : XmlStorage<Operacja>
     {
         private int m_iId;
-        private string m_sRodzajOperacji;
+        private string m_sKategoriaOperacji;
         private double m_dWartoscOperacji;
         private DateTime m_dtDataWykonaniaOperacji;
         private int m_iIdOsoby;
@@ -25,15 +25,15 @@ namespace Budżet_Domowy.Classes
             }
         }
 
-        public string RodzajOperacji
+        public string KategoriaOperacji
         {
-            get => m_sRodzajOperacji;
+            get => m_sKategoriaOperacji;
             set
             {
                 if (string.IsNullOrEmpty(value))
                     throw new Exception("Pole <RodzajOperacji> nie może być puste!");
 
-                m_sRodzajOperacji = value;
+                m_sKategoriaOperacji = value;
             }
         }
 
@@ -78,7 +78,13 @@ namespace Budżet_Domowy.Classes
 
         public override bool InitializeFromObject(Operacja Object)
         {
-            throw new NotImplementedException();
+            this.ID = Object.ID;
+            this.KategoriaOperacji = Object.KategoriaOperacji;
+            this.WartoscOperacji = Object.WartoscOperacji;
+            this.DataWykonaniaOperacji = Object.DataWykonaniaOperacji;
+            this.IdOsoby = Object.IdOsoby;
+
+            return true;
         }
     }
 }
