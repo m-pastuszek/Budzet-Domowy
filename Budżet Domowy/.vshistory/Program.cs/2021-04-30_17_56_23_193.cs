@@ -1,7 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Text;
-using Budżet_Domowy.Classes;
 
 namespace Budżet_Domowy
 {
@@ -11,7 +8,7 @@ namespace Budżet_Domowy
         {
             XmlStorageTypes.Register<User>();
 
-            
+            /*
             User _oUser = new User
             {
                 Login = "jacek",
@@ -21,7 +18,7 @@ namespace Budżet_Domowy
             var _oStream = _oUser.ToXml();
 
             string _sXML = Encoding.UTF8.GetString(_oStream.ToArray());
-            
+            */
 
             string _sXML = @"<User xmlns=""http://schemas.datacontract.org/2004/07/GRUPA_K13.Classes.BusinessLogic"" xmlns:i=""http://www.w3.org/2001/XMLSchema-instance""><Login>jacek</Login><Password>12jacek34</Password></User>";
 

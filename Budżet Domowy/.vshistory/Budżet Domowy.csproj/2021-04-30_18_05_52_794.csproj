@@ -7,11 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Classes\BusinessLogic\Konto.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="Classes\BusinessLogic\Kategoria" />
+    <Compile Include="C:\Users\pastu\source\repos\budzet kopia\XmlStorage.cs" Link="XmlStorage.cs" />
   </ItemGroup>
 
 </Project>

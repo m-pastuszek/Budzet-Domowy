@@ -1,7 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Text;
-using Budżet_Domowy.Classes;
 
 namespace Budżet_Domowy
 {

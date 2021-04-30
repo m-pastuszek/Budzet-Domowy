@@ -6,12 +6,4 @@
     <RootNamespace>Budżet_Domowy</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Classes\BusinessLogic\Konto.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="Classes\BusinessLogic\Kategoria" />
-  </ItemGroup>
-
 </Project>
