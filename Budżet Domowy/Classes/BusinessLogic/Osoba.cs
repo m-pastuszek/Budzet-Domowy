@@ -15,6 +15,7 @@ namespace Budżet_Domowy.Classes
         private int m_iRola;
         private DateTime m_dtDataUtworzenia;
         private DateTime m_dtDataModyfikacji;
+        private int m_iRolaID;
 
         public int ID
         {
@@ -58,6 +59,16 @@ namespace Budżet_Domowy.Classes
             }
         }
 
+        public double StanKonta
+        {
+            get => m_iStanKonta;
+            set
+            {
+                if (value < 0)
+                    throw new Exception("Wartość pola <StanKonta> nie może być mniejsza od 0!");
+                m_iStanKonta = value;
+            }
+        }
         public DateTime DataUtworzenia
         {
             get => m_dtDataUtworzenia;
@@ -97,7 +108,7 @@ namespace Budżet_Domowy.Classes
 
         public Osoba()
         {
-            
+
         }
 
         public Osoba(int ID, string Imie, string Nazwisko, string Login, string Haslo, DateTime DataUtworzenia, DateTime DataModyfikacji, int Rola) : this()
@@ -111,6 +122,21 @@ namespace Budżet_Domowy.Classes
             this.DataModyfikacji = m_dtDataModyfikacji;
             this.Rola = m_iRola;
         }
+        //public void UpdateAccount(string Imie, string Nazwisko)
+        //{
+        //    if (string.IsNullOrWhiteSpace(Imie))
+        //    {
+        //        throw new Exception("Pole <Imie> nie może być puste!");
+        //    }
+        //    else if (string.IsNullOrWhiteSpace(Nazwisko))
+        //    {
+        //        throw new Exception("Pole <Nazwisko> nie może być puste!");
+        //    }
+
+        //    Imie = m_sImie;
+        //    Nazwisko = m_sNazwisko;
+        //    DataModyfikacji = DateTime.Now;
+        //}
 
         public override bool InitializeFromObject(Osoba Object)
         {
